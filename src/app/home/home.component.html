@@ -1,0 +1,87 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+        <div class="bg-primary text-light p-2 mt-5">
+            <h2>Home Page</h2>
+            
+            <button class="btn btn-sm btn-success" [routerLink]="['/create-post']">Add News</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+      
+    </div>
+</div>
+    <!-- <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Thumnail</th>
+          <th scope="col">Author</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts | keyvalue">
+
+          
+         <th scope="row">{{post.value.id}}
+          <td>{{post.value.title}}</td>
+          
+          <td>
+            <img width="200px" src="{{post.value.thum}}" alt="">
+            </td>
+          <td>{{post.value.author}}</td>
+          <td>
+            <button [routerLink]="['/update-post/',post.value.id]" class="btn btn-sm btn-primary" >
+              Update
+            </button>
+          </td>
+          <td>
+            <button (click)="fechDeleteAPI(post.value.id)" class="btn btn-sm btn-danger" >
+              Delete
+            </button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table> -->
+
+    <!-- <div class="row">
+      <div class="col-md-4 mt-5" *ngFor="let post of posts | keyvalue">
+        <div class="card">
+        <img class="card-img-top" src="{{post.value.thum}}" alt="cap">
+        <div class="card-body">
+          <h5 class="card-title">{{post.value.title}}</h5>
+          <p class="card-text">{{post.value.des}}</p>
+          
+          <a [routerLink]="['/update-post/',post.value.id]" class="btn btn-primary mr-5">Update</a>
+
+          <a [routerLink]="['/update-post/',post.value.id]" class="btn btn-danger mr-5">Delete</a>
+        </div>
+      </div>
+      </div>
+      
+      
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-4 mt-5" *ngFor="let post of posts | keyvalue">
+        <div class="card">
+        <!-- <img class="card-img-top" src="{{post.value.title}}" alt="cap"> -->
+        <div class="card-body">
+          <h5 class="card-title">{{post.value.title}}</h5>
+          <p class="card-text">{{post.value.body}}</p>
+          
+          <a [routerLink]="['/update-post/',post.value.id]" class="btn btn-primary mr-5">Update</a>
+
+          <a [routerLink]="['/update-post/',post.value.id]" class="btn btn-danger mr-5">Delete</a>
+        </div>
+      </div>
+      </div>
+      
+      
+    </div>
+  </div> 
